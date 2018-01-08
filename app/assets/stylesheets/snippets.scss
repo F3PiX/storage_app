@@ -1,3 +1,87 @@
 // Place all the styles related to the Snippets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//img {
+//  max-width: 100%;
+//  height: auto;
+//  //width: 100%;
+//}
+
+
+$snippety_accent_color : #2183b3;
+
+@media only screen and (min-width: 0) and (max-width: 64em) {
+  img, form, .button {
+    padding: 20px;
+  }
+  .button {
+    margin: 20px;
+  }
+}
+
+body {
+  font-family: Verdana, Sans-Serif, sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 18px;
+  margin: 3em;
+}
+
+p, ol, ul, td {
+  font-size: large;
+  line-height: 18px;
+  margin: 33px;
+}
+
+a {
+  color: $snippety_accent_color;
+  text-decoration: none;
+
+  &:visited {
+    color: darken($snippety_accent_color, 10%);
+  }
+
+  &:hover {
+    color: forestgreen;
+  }
+}
+
+a.button {
+  //background-color: $snippety_accent_color;
+  text-decoration: none;
+  background-size: contain;
+  width: 200px;
+  height: 100px;
+}
+
+.row {
+  max-width: 80rem;
+  margin-bottom: 20px;
+}
+
+.alert-box {
+  margin-bottom: 0;
+}
+
+.main-section {
+  background: #eee;
+  padding: 10px;
+
+  .title > a {
+    //text-align: left;
+    color: $snippety_accent_color;
+
+    &:visited {
+      text-decoration: none;
+    }
+  }
+}
+
+
+//without overriding p, the content and title are out of sync
+//and the trash icon is not aligned
+.main-section p {
+  margin: 0px;
+
+}

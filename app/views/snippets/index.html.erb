@@ -5,8 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Body</th>
+      <th></th>
+      <th></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,9 +14,9 @@
   <tbody>
     <% @snippets.each do |snippet| %>
       <tr>
-        <td><%= snippet.title %></td>
+        <td><%= link_to snippet.title, snippet_path(snippet) %></td>
         <td><%= snippet.body %></td>
-        <td><%= link_to 'Show', snippet %></td>
+
         <td><%= link_to 'Edit', edit_snippet_path(snippet) %></td>
         <td><%= link_to 'Destroy', snippet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -26,4 +26,6 @@
 
 <br>
 
-<%= link_to 'New Snippet', new_snippet_path %>
+<%= link_to new_snippet_path, class: "button" do %>
+    <i class = "fa fa-plus-square fa-3x" aria-hidden="true"></i> Add a snippet
+<% end %>

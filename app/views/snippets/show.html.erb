@@ -1,13 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
+<h3>
   <%= @snippet.title %>
-</p>
+</h3>
 
 <p>
-  <strong>Body:</strong>
   <%= @snippet.body %>
+</p>
+<p>
+  <%= @snippet.created_at.strftime("%Y %B %e %H:%m") %>
 </p>
 
 <%= link_to 'Edit', edit_snippet_path(@snippet) %> |
