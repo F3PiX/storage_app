@@ -7,6 +7,9 @@
 <p>
   <%= @snippet.body %>
 </p>
+<% if @snippet.image.attached? %>
+    <%= image_tag @snippet.image %>
+<% end %>
 <p>
   <%= @snippet.created_at.strftime("%Y %B %e %H:%m") %>
 </p>
